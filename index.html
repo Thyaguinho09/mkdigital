@@ -2,78 +2,187 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Painel Influencer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Influencer Digital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="wrapper">
-    <aside class="sidebar">
-      <h2 class="logo">🎯 Painel</h2>
-      <nav>
-        <ul>
-          <li class="active">Dashboard</li>
-          <li>Produtos</li>
-          <li>Afiliados</li>
-          <li>Relatórios</li>
-          <li>Ajuda</li>
-        </ul>
-      </nav>
-    </aside>
+  <header class="hero">
+    <h1>Conquiste sua jornada como Influencer Digital</h1>
+    <p>Aprenda com nossos cursos, receba dicas semanais e veja histórias reais de sucesso.</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Digite seu e-mail" required />
+      <button type="submit">Inscrever-se</button>
+    </form>
+  </header>
 
-    <main class="main-content">
-      <header>
-        <h1>Produtos</h1>
-        <button class="btn-criar">Criar produto</button>
-      </header>
+  <section class="cards-section">
+    <div class="card">
+      <h2>Cursos e eBooks</h2>
+      <p>Aprenda técnicas de engajamento, produção de conteúdo e monetização.</p>
+      <a href="#" class="btn">Ver Cursos</a>
+    </div>
+    <div class="card">
+      <h2>Depoimentos</h2>
+      <p>Veja como outras pessoas transformaram suas vidas com nossas dicas.</p>
+      <a href="#" class="btn">Ler Histórias</a>
+    </div>
+    <div class="card">
+      <h2>Contato</h2>
+      <p>Tire dúvidas ou envie sugestões para nossa equipe.</p>
+      <a href="#contato" class="btn">Fale Conosco</a>
+    </div>
+  </section>
 
-      <div class="tabs">
-        <button class="tab-btn active" data-tab="afiliacoes">Minhas afiliações</button>
-        <button class="tab-btn" data-tab="produtos">Meus produtos</button>
-        <button class="tab-btn" data-tab="coproducoes">Minhas co-produções</button>
-      </div>
+  <section id="contato" class="contact-section">
+    <h2>Entre em contato</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Seu nome" required />
+      <input type="email" placeholder="Seu e-mail" required />
+      <textarea placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
 
-      <section id="afiliacoes" class="tab-content active">
-        <table>
-          <thead>
-            <tr>
-              <th>Data</th>
-              <th>Nome</th>
-              <th>Comissão</th>
-              <th>Status</th>
-              <th>Ações</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>08/06/2023</td>
-              <td>
-                <strong>Clube Milhas</strong><br />
-                <small>Silvino Toti Antunes Simões</small>
-              </td>
-              <td>40%</td>
-              <td><span class="status ativo">Ativo</span></td>
-              <td><button class="btn-acao">⋮</button></td>
-            </tr>
-            <tr>
-              <td>07/06/2023</td>
-              <td>
-                <strong>Mentoria Associado Secreto</strong><br />
-                <small>Suelen Mello</small>
-              </td>
-              <td>60%</td>
-              <td><span class="status pendente">Pendente</span></td>
-              <td><button class="btn-acao">⋮</button></td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+  <footer class="footer">
+    <p>&copy; 2025 Influencer Digital. Todos os direitos reservados.</p>
+  </footer>
 
-      <section id="produtos" class="tab-content">Nenhum produto cadastrado.</section>
-      <section id="coproducoes" class="tab-content">Nenhuma co-produção registrada.</section>
-    </main>
-  </div>
+  <script>
+    document.querySelector('.newsletter-form').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('E-mail cadastrado com sucesso!');
+    });
 
-  <script src="scripts.js"></script>
+    document.querySelector('.contact-form').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Mensagem enviada com sucesso!');
+    });
+  </script>
 </body>
 </html>
+
+<!-- style.css -->
+<style>
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f7f7fb;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: #6c63ff;
+    color: white;
+  }
+
+  .hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .newsletter-form {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .newsletter-form input {
+    padding: 0.8rem;
+    border-radius: 25px;
+    border: none;
+    width: 250px;
+  }
+
+  .newsletter-form button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    background: white;
+    color: #6c63ff;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+  }
+
+  .cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 1rem;
+  }
+
+  .card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: #6c63ff;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .contact-section {
+    background: #fff;
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+
+  .contact-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 1rem;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    width: 100%;
+    resize: vertical;
+  }
+
+  .contact-form button {
+    background: #6c63ff;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .footer {
+    background: #f0f0f5;
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 768px) {
+    .cards-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
