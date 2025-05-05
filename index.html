@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Influencer Digital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>Desenvolva-se como Influencer Digital</h1>
-  <p>Dicas, cursos e ferramentas para crescer nas redes sociais</p>
+<header class="header">
+  <div class="container">
+    <h1>Conquiste as redes como Influencer</h1>
+    <p>Aprenda, cresça e se destaque com nossos cursos e dicas práticas.</p>
+  </div>
 </header>
 
-<nav>
+<nav class="nav-tabs">
   <a href="#" class="tab-link active" data-tab="dicas">Dicas</a>
   <a href="#" class="tab-link" data-tab="depoimentos">Depoimentos</a>
   <a href="#" class="tab-link" data-tab="cursos">Cursos</a>
@@ -21,42 +24,43 @@
   <a href="#" class="tab-link" data-tab="contato">Contato</a>
 </nav>
 
-<main>
+<main class="container">
+
   <section id="dicas" class="tab-content">
-    <h2>Dicas para Crescer</h2>
-    <div class="card-grid">
-      <div class="card">Escolha um nicho específico.</div>
-      <div class="card">Publique conteúdo regularmente.</div>
-      <div class="card">Use métricas para melhorar.</div>
+    <h2>Dicas para crescer</h2>
+    <div class="grid">
+      <div class="card">Escolha um nicho claro e objetivo.</div>
+      <div class="card">Mantenha consistência no conteúdo.</div>
+      <div class="card">Use ferramentas de análise.</div>
     </div>
   </section>
 
   <section id="depoimentos" class="tab-content hidden">
-    <h2>Depoimentos</h2>
-    <div class="card-grid">
-      <div class="card">"Ganhei 10k seguidores com essas dicas!" - Ana</div>
-      <div class="card">"O eBook mudou minha estratégia." - Lucas</div>
+    <h2>Depoimentos reais</h2>
+    <div class="grid">
+      <div class="card">“Cresci 50k seguidores aplicando as técnicas!” — Júlia</div>
+      <div class="card">“Hoje vivo do meu Instagram.” — Rafael</div>
     </div>
   </section>
 
   <section id="cursos" class="tab-content hidden">
     <h2>Cursos e eBooks</h2>
-    <div class="card-grid">
-      <div class="card">Curso Influencer Iniciante</div>
-      <div class="card">eBook: 50 Ideias de Conteúdo</div>
+    <div class="grid">
+      <div class="card">Curso: Influencer do Zero ao Pro</div>
+      <div class="card">eBook: 50 ideias de conteúdo viral</div>
     </div>
   </section>
 
   <section id="newsletter" class="tab-content hidden">
-    <h2>Assine a Newsletter</h2>
+    <h2>Receba conteúdo exclusivo</h2>
     <form>
-      <input type="email" placeholder="Seu e-mail" required>
+      <input type="email" placeholder="Digite seu e-mail" required>
       <button type="submit">Inscrever</button>
     </form>
   </section>
 
   <section id="contato" class="tab-content hidden">
-    <h2>Entre em Contato</h2>
+    <h2>Fale conosco</h2>
     <form>
       <input type="text" placeholder="Seu nome" required>
       <input type="email" placeholder="Seu e-mail" required>
@@ -64,10 +68,11 @@
       <button type="submit">Enviar</button>
     </form>
   </section>
+
 </main>
 
 <footer>
-  <p>© 2025 Influencer Digital</p>
+  <p>© 2025 Influencer Digital. Todos os direitos reservados.</p>
 </footer>
 
 <script src="scripts.js"></script>
