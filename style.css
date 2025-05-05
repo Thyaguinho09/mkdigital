@@ -2,13 +2,15 @@ document.querySelectorAll('.tab-link').forEach(link => {
   link.addEventListener('click', function (e) {
     e.preventDefault();
 
-    // Atualiza os links
+    // Troca aba ativa
     document.querySelectorAll('.tab-link').forEach(l => l.classList.remove('active'));
     this.classList.add('active');
 
-    // Esconde tudo e mostra só a aba certa
-    const tab = this.getAttribute('data-tab');
-    document.querySelectorAll('.tab-content').forEach(sec => sec.classList.add('hidden'));
-    document.getElementById(tab).classList.remove('hidden');
+    // Oculta tudo
+    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
+
+    // Exibe a aba escolhida
+    const selected = this.getAttribute('data-tab');
+    document.getElementById(selected).classList.remove('hidden');
   });
 });
