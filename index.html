@@ -1,80 +1,79 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Influencer Digital</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <title>Painel Influencer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="wrapper">
+    <aside class="sidebar">
+      <h2 class="logo">🎯 Painel</h2>
+      <nav>
+        <ul>
+          <li class="active">Dashboard</li>
+          <li>Produtos</li>
+          <li>Afiliados</li>
+          <li>Relatórios</li>
+          <li>Ajuda</li>
+        </ul>
+      </nav>
+    </aside>
 
-<header class="header">
-  <div class="container">
-    <h1>Construa sua carreira como Influencer</h1>
-    <p>Aprenda a crescer nas redes sociais com dicas, cursos e estratégias eficazes.</p>
+    <main class="main-content">
+      <header>
+        <h1>Produtos</h1>
+        <button class="btn-criar">Criar produto</button>
+      </header>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="afiliacoes">Minhas afiliações</button>
+        <button class="tab-btn" data-tab="produtos">Meus produtos</button>
+        <button class="tab-btn" data-tab="coproducoes">Minhas co-produções</button>
+      </div>
+
+      <section id="afiliacoes" class="tab-content active">
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Nome</th>
+              <th>Comissão</th>
+              <th>Status</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>08/06/2023</td>
+              <td>
+                <strong>Clube Milhas</strong><br />
+                <small>Silvino Toti Antunes Simões</small>
+              </td>
+              <td>40%</td>
+              <td><span class="status ativo">Ativo</span></td>
+              <td><button class="btn-acao">⋮</button></td>
+            </tr>
+            <tr>
+              <td>07/06/2023</td>
+              <td>
+                <strong>Mentoria Associado Secreto</strong><br />
+                <small>Suelen Mello</small>
+              </td>
+              <td>60%</td>
+              <td><span class="status pendente">Pendente</span></td>
+              <td><button class="btn-acao">⋮</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="produtos" class="tab-content">Nenhum produto cadastrado.</section>
+      <section id="coproducoes" class="tab-content">Nenhuma co-produção registrada.</section>
+    </main>
   </div>
-</header>
 
-<nav class="nav-tabs">
-  <a href="#" class="tab-link active" data-tab="dicas">Dicas</a>
-  <a href="#" class="tab-link" data-tab="depoimentos">Depoimentos</a>
-  <a href="#" class="tab-link" data-tab="cursos">Cursos</a>
-  <a href="#" class="tab-link" data-tab="newsletter">Newsletter</a>
-  <a href="#" class="tab-link" data-tab="contato">Contato</a>
-</nav>
-
-<main class="container">
-
-  <section id="dicas" class="tab-content">
-    <h2>Dicas para se destacar</h2>
-    <div class="grid">
-      <div class="card">Defina seu nicho e público ideal.</div>
-      <div class="card">Crie conteúdo com consistência e qualidade.</div>
-      <div class="card">Acompanhe métricas e adapte sua estratégia.</div>
-    </div>
-  </section>
-
-  <section id="depoimentos" class="tab-content hidden">
-    <h2>Depoimentos</h2>
-    <div class="grid">
-      <div class="card">"Em 3 meses, bati 50 mil seguidores!" – Ana Paula</div>
-      <div class="card">"Vivo da internet depois dessas dicas!" – João Silva</div>
-    </div>
-  </section>
-
-  <section id="cursos" class="tab-content hidden">
-    <h2>Cursos e eBooks</h2>
-    <div class="grid">
-      <div class="card">Curso completo: Influencer do Zero</div>
-      <div class="card">eBook: 100 ideias de conteúdo viral</div>
-    </div>
-  </section>
-
-  <section id="newsletter" class="tab-content hidden">
-    <h2>Receba conteúdo exclusivo</h2>
-    <form>
-      <input type="email" placeholder="Digite seu e-mail" required>
-      <button type="submit">Quero me inscrever</button>
-    </form>
-  </section>
-
-  <section id="contato" class="tab-content hidden">
-    <h2>Fale com a gente</h2>
-    <form>
-      <input type="text" placeholder="Seu nome" required>
-      <input type="email" placeholder="Seu e-mail" required>
-      <textarea placeholder="Escreva sua mensagem" required></textarea>
-      <button type="submit">Enviar mensagem</button>
-    </form>
-  </section>
-
-</main>
-
-<footer>
-  <p>© 2025 Influencer Digital • Todos os direitos reservados</p>
-</footer>
-
-<script src="scripts.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
